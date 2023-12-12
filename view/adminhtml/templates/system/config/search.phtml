@@ -1,0 +1,42 @@
+<?php
+/**
+ * @var Magentiz\ConfigFinder\Block\SearchConfig $block
+ * @var Magento\Framework\Json\Helper\Data $helper
+ */
+$helper = $this->helper(\Magento\Framework\Json\Helper\Data::class)
+?>
+
+<form action="<?= $block->getUrl('backend_extend/index/searchconfig') ?>" method="post" id="search-config-form" >
+    <div class="search-form">
+        <label class="icon" for="search-input"></label>
+        <input name="form_key" type="hidden" value="<?= $block->escapeHtmlAttr($block->getFormKey()) ?>"/>
+        <input type="text"
+               name="query"
+               id="search-input"
+               autocomplete="off"
+               data-validate="{required:true}"
+               placeholder="Find config..."
+        >
+    </div>
+    <div class="search-btn">
+        <button type="submit" class="primary">Find Config</button>
+        <button type="submit" class="primary show-text">Find Config with Text Results</button>
+        <button type="button" class="primary clear">Clear Results</button>
+    </div>
+</form>
+
+<div id="search-config-results"></div>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'searchConfig',
+    ], function($) {
+        var options =  {
+            baseUrl: '<?= $block->getUrl('backend_extend/index/searchconfig') ?>'
+        }
+
+        $('#search-config-form').searchConfig(options);
+    });
+
+</script>

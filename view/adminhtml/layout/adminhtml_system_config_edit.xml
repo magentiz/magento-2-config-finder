@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.main.container">
+            <container name="search.wrapper" as="search-wrap" before="main.col" htmlId="page:search" htmlTag="div" htmlClass="search-wrap">
+                <block class="Magentiz\ConfigFinder\Block\SearchConfig"
+                       name="adminhtml.system.config.search"
+                       template="Magentiz_ConfigFinder::system/config/search.phtml"
+                       before="main.col"
+                />
+            </container>
+        </referenceContainer>
+        <referenceBlock name="adminhtml.system.config.tabs">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magentiz_ConfigFinder::system/config/tab.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,32 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div class="selectmenu" collapsible="">
+    <div class="selectmenu-value" openCollapsible="">
+        <input type="text" ko-value="_value" attr="id: index" autoselect/>
+    </div>
+    <button class="selectmenu-toggle" type="button" css="_active: $collapsible.opened" toggleCollapsible>
+        <span translate="'Select'"></span>
+    </button>
+    <div class="selectmenu-items" css="_active: $collapsible.opened" outerClick="discardAll.bind($data)">
+        <ul>
+            <li repeat="foreach: optionsArray, item: '$size'" css="_edit: isEditing($size().value)">
+                <div class="selectmenu-item-edit" if="$size().editable" keyboard="13: updateSize.bind($data, $size().value, false)">
+                    <input class="admin__control-text" type="text"
+                           ko-value="$size()._value" hasFocus="isEditing($size().value)"/>
+                    <button class="action-save" type="button" click="updateSize.bind($data, $size().value, false)">
+                        <span translate="'Save'"></span>
+                    </button>
+                    <button class="action-delete" type="button" click="removeSize.bind($data, $size().value, false)">
+                        <span translate="'Delete'"></span>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<label class="admin__control-support-text" translate="'per page'" attr="for: index"></label>

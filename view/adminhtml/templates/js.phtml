@@ -1,0 +1,8 @@
+<script src="<?= $block->getViewFileUrl('Magentiz_ConfigFinder::js/menu.js')?>"></script>
+
+<script>
+    require(['tippy'], function (tippy) {
+        // Tippify all titled elements
+        tippy('.tooltip-menu[title]', {theme: 'light'});
+    });
+</script>
