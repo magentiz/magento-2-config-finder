@@ -6,18 +6,5 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Backend\Block\Menu">
-        <plugin name="Magentiz_ConfigFinder:menu" type="Magentiz\ConfigFinder\Plugin\Backend\Block\Menu"/>
-    </type>
-    <type name="Magento\Framework\App\Http">
-        <plugin name="redirectToDashboardError" type="Magentiz\ConfigFinder\Plugin\App\HttpPlugin"/>
-    </type>
-    <preference for="Magento\Backend\Block\Widget\Grid\Column\Filter\Select\Extended" type="Magentiz\ConfigFinder\Block\Widget\Grid\Column\Filter\SelectExtend" />
-    <preference for="Magento\Backend\Block\Widget\Form\Element\ElementCreator" type="Magentiz\ConfigFinder\Block\Widget\Form\ElementCreator"/>
     <preference for="Magento\Backend\Block\Store\Switcher" type="Magentiz\ConfigFinder\Block\Store\Switcher"/>
-    
-    <type name="Magento\Backend\Model\Menu\Builder">
-        <plugin name="Magefan_Community_Plugin_Magento_Backend_Model_Menu_Builder" disabled="true"/>
-        <plugin name="move_magefan_to_menu_extensions" type="Magentiz\ConfigFinder\Plugin\Magento\Backend\Model\Menu\BuilderPlugin"/>
-    </type>
 </config>

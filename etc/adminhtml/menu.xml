@@ -9,28 +9,12 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <remove id="OpenTechiz_ProductionReport::production_reports" />
         <add id="Magentiz_ConfigFinder::extensions"
              title="Extensions"
              module="Magentiz_ConfigFinder"
              translate="title"
              sortOrder="60"
              resource="Magentiz_ConfigFinder::extensions"
-        />
-        <update id="MenuAmasty_Base::menu"
-                parent="Magentiz_ConfigFinder::extensions"
-         />
-        <update id="Magedelight_Base::md_base_root"
-                parent="Magentiz_ConfigFinder::extensions"
-         />
-        <update id="Mirasvit_Core::menu"
-                parent="Magentiz_ConfigFinder::extensions"
-         />
-        <update id="MagicToolbox_MagicToolbox::magictoolbox"
-                parent="Magentiz_ConfigFinder::extensions"
-         />
-        <update id="Magedelight_Giftwrapper::giftwrapper_root"
-                parent="Magentiz_ConfigFinder::extensions"
         />
     </menu>
 </config>

@@ -6,7 +6,7 @@
 $helper = $this->helper(\Magento\Framework\Json\Helper\Data::class)
 ?>
 
-<form action="<?= $block->getUrl('backend_extend/index/searchconfig') ?>" method="post" id="search-config-form" >
+<form action="<?= $block->getUrl('config_finder/result/index') ?>" method="post" id="search-config-form" >
     <div class="search-form">
         <label class="icon" for="search-input"></label>
         <input name="form_key" type="hidden" value="<?= $block->escapeHtmlAttr($block->getFormKey()) ?>"/>
@@ -19,9 +19,15 @@ $helper = $this->helper(\Magento\Framework\Json\Helper\Data::class)
         >
     </div>
     <div class="search-btn">
-        <button type="submit" class="primary">Find Config</button>
-        <button type="submit" class="primary show-text">Find Config with Text Results</button>
-        <button type="button" class="primary clear">Clear Results</button>
+        <button type="submit" class="primary">
+            <span><?= __('Find Config') ?></span>
+        </button>
+        <button type="submit" class="primary show-text">
+            <span><?= __('Find Config with Text Results') ?></span>
+        </button>
+        <button type="button" class="primary clear">
+            <span><?= __('Clear Results') ?></span>
+        </button>
     </div>
 </form>
 
@@ -33,7 +39,7 @@ $helper = $this->helper(\Magento\Framework\Json\Helper\Data::class)
         'searchConfig',
     ], function($) {
         var options =  {
-            baseUrl: '<?= $block->getUrl('backend_extend/index/searchconfig') ?>'
+            baseUrl: '<?= $block->getUrl('config_finder/result/index') ?>'
         }
 
         $('#search-config-form').searchConfig(options);

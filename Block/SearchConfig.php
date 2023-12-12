@@ -12,7 +12,7 @@ class SearchConfig extends \Magento\Backend\Block\Template
     {
         return [
             'searchConfig' => [
-                'source' => $this->getUrl('backend_extend/index/searchconfig')
+                'source' => $this->getUrl('config_finder/result/index')
             ]
         ];
     }

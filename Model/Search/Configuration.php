@@ -27,7 +27,7 @@ class Configuration extends DataObject
     {
         $results = [];
 
-        if (! $this->getQuery()) {
+        if (!$this->getQuery()) {
             $this->setResults($results);
             return $this;
         }
@@ -80,7 +80,7 @@ class Configuration extends DataObject
                     "id" => $sectionId,
                     "tabId" => $sectionId,
                     "name" => $sectionLabel,
-                    "description" => "Configuration -> $tabLabel -> $sectionLabel",
+                    "description" => "Configuration => $tabLabel => $sectionLabel",
                     "url" => $this->_url->getUrl("admin/system_config/edit/section/$sectionId")
                 ];
 
@@ -91,7 +91,7 @@ class Configuration extends DataObject
                         "id" => $groupId,
                         "tabId" => $sectionId,
                         "name" => $groupLabel,
-                        "description" => "Configuration -> $tabLabel -> $sectionLabel -> $groupLabel",
+                        "description" => "Configuration => $tabLabel => $sectionLabel => $groupLabel",
                         "url" => $this->_url->getUrl("admin/system_config/edit/section/$sectionId") . "#$sectionId" . "_" . "$groupId" . "-link"
                     ];
                     foreach ($group->getChildren() as $field) {
@@ -103,7 +103,7 @@ class Configuration extends DataObject
                             "tabId" => $sectionId,
                             "name" => $fieldLabel,
                             'type' => $type,
-                            "description" => "Configuration -> $tabLabel -> $sectionLabel -> $groupLabel -> $fieldLabel",
+                            "description" => "Configuration => $tabLabel => $sectionLabel => $groupLabel => $fieldLabel",
                             "url" => $this->_url->getUrl("admin/system_config/edit/section/$sectionId") . "#$sectionId" . "_" . "$groupId" . ($type == 'field' ? "-link" : '')
                         ];
                     }

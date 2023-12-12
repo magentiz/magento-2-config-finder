@@ -1,6 +1,6 @@
 <?php
 
-namespace Magentiz\ConfigFinder\Controller\Adminhtml\Index;
+namespace Magentiz\ConfigFinder\Controller\Adminhtml\Result;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\HttpGetActionInterface;
@@ -8,7 +8,7 @@ use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magentiz\ConfigFinder\Model\Search\Configuration as SearchConfiguration;
 
-class SearchConfig extends \Magento\Backend\App\Action implements HttpGetActionInterface, HttpPostActionInterface
+class Index extends \Magento\Backend\App\Action implements HttpGetActionInterface, HttpPostActionInterface
 {
     protected $resultJsonFactory;
 
@@ -34,7 +34,7 @@ class SearchConfig extends \Magento\Backend\App\Action implements HttpGetActionI
         $resultJson = $this->resultJsonFactory->create();
         $items = [];
 
-        if (! $this->_authorization->isAllowed('Magento_Config::config')) {
+        if (!$this->_authorization->isAllowed('Magento_Config::config')) {
             $items['error'] = [
                 'id' => 'error',
                 'type' => __('Error'),
