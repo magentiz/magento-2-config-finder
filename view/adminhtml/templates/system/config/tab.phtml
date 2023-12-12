@@ -17,8 +17,8 @@
                 if ($block->isSectionActive($_section)) {
                     $activeCollapsible = true;
                 }
-            } ?>
-
+            }
+        ?>
             <div class="config-nav-block admin__page-nav _collapsed <?= $activeCollapsible ? '_tab_active' : ''; ?>
                 <?php if ($_tab->getClass()) : ?>
                     <?= $block->escapeHtmlAttr($_tab->getClass()) ?>
@@ -49,7 +49,6 @@
                         <?php $_iterator++; ?>
                     <?php endforeach; ?>
                 </ul>
-
             </div>
         <?php endforeach; ?>
     </div>

@@ -10,11 +10,26 @@ use Magento\Framework\DataObject;
 
 class Configuration extends DataObject
 {
+    /**
+     * @var \Magento\Config\Model\Config\Structure
+     */
     protected $_configStructure;
+    /**
+     * @var \Magento\Config\Model\Config\Structure\Data
+     */
     protected $_configStructureData;
-
+    /**
+     * @var \Magento\Framework\UrlInterface
+     */
     protected $_url;
 
+    /**
+     * Configuration constructor.
+     * @param \Magento\Config\Model\Config\Structure $configStructure
+     * @param \Magento\Config\Model\Config\Structure\Data $configStructureData
+     * @param \Magento\Framework\UrlInterface $url
+     * @param array $data
+     */
     public function __construct(
         \Magento\Config\Model\Config\Structure $configStructure,
         \Magento\Config\Model\Config\Structure\Data $configStructureData,
@@ -27,6 +42,9 @@ class Configuration extends DataObject
         $this->_url = $url;
     }
 
+    /**
+     * @return $this
+     */
     public function load()
     {
         $results = [];
@@ -51,26 +69,44 @@ class Configuration extends DataObject
         return $this;
     }
 
+    /**
+     * @param $query
+     * @return mixed
+     */
     public function setQuery($query)
     {
         return $this->setData('query', $query);
     }
 
+    /**
+     * @return mixed
+     */
     public function getQuery()
     {
         return $this->getData('query');
     }
 
+    /**
+     * @param $results
+     * @return mixed
+     */
     public function setResults($results)
     {
         return $this->setData('results', $results);
     }
 
+    /**
+     * @return mixed
+     */
     public function getResults()
     {
         return $this->getData('results');
     }
 
+    /**
+     * @param $tabs
+     * @return array
+     */
     protected function prepareDataForSearch($tabs)
     {
         $data = [];

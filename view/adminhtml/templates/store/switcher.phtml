@@ -145,7 +145,7 @@
 
     <script>
         function searchScopeStore() {
-            var input = document.getElementById("search_store");
+            var input = document.getElementById('search_store');
             var filter = input.value.toLowerCase();
             var nodes = document.getElementsByClassName('store-target');
             for (i = 0; i < nodes.length; i++) {
@@ -153,7 +153,7 @@
 
                 if (filter) {
                     if (nodes[i].innerText.toLowerCase().includes(filter)) {
-                        parentNode.style.display = "block";
+                        parentNode.style.display = 'block';
 
                         if (parentNode.classList.contains('store-switcher-store-view')) {
                             checkAndAddDisplayBlock(parentNode.previousElementSibling);
@@ -161,10 +161,10 @@
                             parentNode.previousElementSibling.style.display = "block";
                         }
                     } else {
-                        nodes[i].parentElement.style.display = "none";
+                        nodes[i].parentElement.style.display = 'none';
                     }
                 } else {
-                    parentNode.style.display = "block";
+                    parentNode.style.display = 'block';
                 }
             }
         }

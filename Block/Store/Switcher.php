@@ -8,6 +8,9 @@ namespace Magentiz\ConfigFinder\Block\Store;
 
 class Switcher extends \Magento\Backend\Block\Store\Switcher
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function _toHtml()
     {
         $this->setTemplate('Magentiz_ConfigFinder::store/switcher.phtml');
