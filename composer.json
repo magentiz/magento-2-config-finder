@@ -1,0 +1,38 @@
+{
+    "name": "magentiz/config-finder",
+    "description": "Magentiz_ConfigFinder Extension, config-finder for magento 2",
+    "require": {
+        "php": "~5.6.5 || >=7.4"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+          "name": "Open Techiz",
+          "email": "support@opentechiz.com",
+          "homepage": "https://www.opentechiz.com",
+          "role": "Technical Support"
+        }
+    ],
+    "minimum-stability": "dev",
+    "keywords": [
+      "magento 2",
+      "magento 2 config-finder",
+      "magento config-finder",
+      "config-finder",
+      "backend-config",
+      "magentiz",
+      "Magentiz_ConfigFinder",
+      "opentechiz"
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Magentiz\\ConfigFinder\\": ""
+        }
+    }
+}
