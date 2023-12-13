@@ -1,4 +1,4 @@
-# Magentiz ConfigFinder by Open Techiz
+# Magentiz ConfigFinder by Magentiz
 
 Magentiz_ConfigFinder Extension, config finder for magento 2
 
@@ -43,11 +43,11 @@ You can also search for a store to configure.
 ![General](docs/find-store.png)
 
 ## Support
-If you have any issues, please [contact us](mailto:support@opentechiz.com)
+If you have any issues, please [contact us](mailto:info@magentiz.com)
 
 ## Need More Features?
 Please contact us to get a quote
-https://www.opentechiz.com/contact-us/
+https://magentiz.com/contact-us/
 
 ## License
 The code is licensed under [Open Software License ("OSL") v. 3.0](http://opensource.org/licenses/osl-3.0.php).

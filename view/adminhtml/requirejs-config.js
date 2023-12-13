@@ -1,5 +1,5 @@
 /**
- * Copyright © Open Techiz. All rights reserved.
+ * Copyright © Magentiz. All rights reserved.
  * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
  */
 var config = {

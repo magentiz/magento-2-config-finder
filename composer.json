@@ -12,9 +12,9 @@
     ],
     "authors": [
         {
-          "name": "Open Techiz",
-          "email": "support@opentechiz.com",
-          "homepage": "https://www.opentechiz.com",
+          "name": "Magentiz",
+          "email": "info@magentiz.com",
+          "homepage": "https://magentiz.com",
           "role": "Technical Support"
         }
     ],
@@ -26,8 +26,7 @@
       "config-finder",
       "backend-config",
       "magentiz",
-      "Magentiz_ConfigFinder",
-      "opentechiz"
+      "Magentiz_ConfigFinder"
     ],
     "autoload": {
         "files": [ "registration.php" ],
