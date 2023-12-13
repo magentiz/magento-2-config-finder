@@ -12,7 +12,7 @@ Magentiz_ConfigFinder Extension, config finder for magento 2
   * Run command: composer require magentiz/config-finder
 
 ## Installation Method 2 - Installing using archive
-  * Download [ZIP Archive](https://pm.opentechiz.com/magentiz-module/config-finder/-/archive/master/config-finder-master.zip)
+  * Download [ZIP Archive](https://github.com/magentiz/magento-2-config-finder/releases)
   * Extract files
   * In your Magento 2 root directory create folder app/code/Magentiz/ConfigFinder
   * Copy files and folders from archive to that folder
