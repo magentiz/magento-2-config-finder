@@ -1,5 +1,5 @@
 {
-    "name": "magentiz/config-finder",
+    "name": "magentiz/module-config-finder",
     "description": "Magentiz_ConfigFinder Extension, config-finder for magento 2",
     "require": {
         "php": ">=7.4"
